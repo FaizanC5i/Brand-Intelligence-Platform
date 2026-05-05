@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Best-in-class design system inspired by Linear, Stripe, Notion, Figma */
+
+@layer base {
+  :root {
+    /* Modern color system - sophisticated and professional */
+    --background: 250 250% 99%;
+    --foreground: 240 6% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 10%;
+
+    /* Modern blue primary (like Linear/Figma) */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 221 83% 70%;
+
+    /* Sophisticated grays */
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 221 83% 95%;
+    --accent-foreground: 221 83% 53%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 221 83% 53%;
+
+    /* Extended modern color palette - diverse and distinguishing */
+    --success: 142 76% 36%;
+    --warning: 43 96% 56%;
+    --info: 199 89% 48%;
+    --emerald: 160 84% 39%;
+    --amber: 45 93% 58%;
+    --rose: 351 83% 61%;
+    --orange: 25 95% 53%;
+    --teal: 173 58% 39%;
+    --indigo: 239 84% 67%;
+    --cyan: 188 78% 41%;
+    
+    /* Modern neutral palette */
+    --neutral-50: 240 20% 99%;
+    --neutral-100: 240 5% 96%;
+    --neutral-200: 240 6% 90%;
+    --neutral-300: 240 5% 84%;
+    --neutral-400: 240 5% 65%;
+    --neutral-500: 240 4% 46%;
+    --neutral-600: 240 5% 34%;
+    --neutral-700: 240 5% 26%;
+    --neutral-800: 240 4% 16%;
+    --neutral-900: 240 6% 10%;
+    
+    /* Modern gradients - more varied and distinguishing */
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(160 84% 39%) 0%, hsl(173 58% 39%) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(25 95% 53%) 0%, hsl(43 96% 56%) 100%);
+    --gradient-cool: linear-gradient(135deg, hsl(188 78% 41%) 0%, hsl(239 84% 67%) 100%);
+    
+    /* Soft color palette gradients from uploaded image */
+    --gradient-pastel-blue: linear-gradient(135deg, hsl(351 70% 70%) 0%, hsl(351 80% 75%) 100%);
+    --gradient-pastel-green: linear-gradient(135deg, hsl(25 45% 85%) 0%, hsl(30 50% 88%) 100%);
+    --gradient-pastel-orange: linear-gradient(135deg, hsl(160 35% 75%) 0%, hsl(165 40% 78%) 100%);
+    --gradient-pastel-purple: linear-gradient(135deg, hsl(320 25% 75%) 0%, hsl(315 30% 78%) 100%);
+    --gradient-subtle: linear-gradient(135deg, hsl(240 20% 99%) 0%, hsl(240 5% 96%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(0 0% 100% / 0.6) 100%);
+    --gradient-mesh: radial-gradient(at 40% 20%, hsl(221 83% 53% / 0.12) 0px, transparent 50%), 
+                     radial-gradient(at 80% 0%, hsl(160 84% 39% / 0.12) 0px, transparent 50%), 
+                     radial-gradient(at 0% 50%, hsl(199 89% 48% / 0.12) 0px, transparent 50%);
+    
+    /* Professional shadows */
+    --shadow-xs: 0 1px 2px 0 hsl(240 6% 10% / 0.05);
+    --shadow-sm: 0 1px 3px 0 hsl(240 6% 10% / 0.1), 0 1px 2px -1px hsl(240 6% 10% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(240 6% 10% / 0.1), 0 2px 4px -2px hsl(240 6% 10% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(240 6% 10% / 0.1), 0 4px 6px -4px hsl(240 6% 10% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(240 6% 10% / 0.1), 0 8px 10px -6px hsl(240 6% 10% / 0.1);
+    --shadow-2xl: 0 25px 50px -12px hsl(240 6% 10% / 0.25);
+    --shadow-colored: 0 25px 50px -12px hsl(221 83% 53% / 0.25);
+    --shadow-glow: 0 0 50px hsl(221 83% 53% / 0.3);
+
+    --radius: 0.75rem;
+
+    /* Sidebar colors */
+    --sidebar-background: 240 20% 99%;
+    --sidebar-foreground: 240 6% 10%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 240 6% 90%;
+    --sidebar-ring: 221 83% 53%;
+  }
+
+  .dark {
+    --background: 240 6% 6%;
+    --foreground: 240 5% 96%;
+
+    --card: 240 6% 8%;
+    --card-foreground: 240 5% 96%;
+
+    --popover: 240 6% 8%;
+    --popover-foreground: 240 5% 96%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 240 6% 6%;
+
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 5% 96%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 4% 16%;
+    --accent-foreground: 240 5% 96%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 240 5% 96%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 221 83% 53%;
+    
+    --sidebar-background: 240 6% 8%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 240 6% 6%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased text-lg;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  
+  /* Increase all text sizes proportionally */
+  h1 { @apply text-4xl font-bold; }
+  h2 { @apply text-3xl font-semibold; }
+  h3 { @apply text-2xl font-semibold; }
+  h4 { @apply text-xl font-medium; }
+  h5 { @apply text-lg font-medium; }
+  h6 { @apply text-base font-medium; }
+  
+  p { @apply text-lg leading-relaxed; }
+  
+  /* Larger text for common UI elements - significantly increased */
+  .text-xs { font-size: 16px !important; }
+  .text-sm { font-size: 18px !important; }
+  .text-base { font-size: 20px !important; }
+  .text-lg { font-size: 22px !important; }
+  .text-xl { font-size: 24px !important; }
+  .text-2xl { font-size: 28px !important; }
+  .text-3xl { font-size: 32px !important; }
+  .text-4xl { font-size: 38px !important; }
+  .text-5xl { font-size: 44px !important; }
+}
+
+@layer components {
+  /* Modern glassmorphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-neutral-900/80 backdrop-blur-xl border border-white/10;
+  }
+
+  /* Modern card styles */
+  .card-modern {
+    @apply bg-white/60 backdrop-blur-sm border border-neutral-200/50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Animated gradient text */
+  .gradient-text {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+
+  /* Modern buttons */
+  .btn-primary {
+    @apply bg-gradient-primary text-white rounded-xl px-6 py-3 font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply bg-neutral-100 text-neutral-900 rounded-xl px-6 py-3 font-medium hover:bg-neutral-200 transition-all duration-300;
+  }
+
+  /* Hover animations */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  /* Modern inputs */
+  .input-modern {
+    @apply bg-white/80 border border-neutral-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
+  }
+}
